@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Nickel City 9 Baseball LLC.</title>
@@ -115,17 +115,19 @@
 <style>
     /* Center the slideshow container */
     .slideshow-container {
-        max-width: 1080px;
+        max-width: 100%; /* Adjust as needed */
         margin: auto;
         overflow: hidden;
+        position: relative;
     }
 
     /* Style the image */
     .slideshow-img {
         width: 100%;
         height: auto; /* Maintain aspect ratio */
-        max-height: 700px; /* Limit maximum height */
+        max-height: 1060px; /* Limit maximum height */
         object-fit: cover; /* Prevent stretching */
+        max-width: 100%; /* Ensure image does not exceed container width */
     }
 
     /* Style the dots */
@@ -138,54 +140,76 @@
         cursor: pointer;
         height: 15px;
         width: 15px;
-        margin: 0 2px;
+        margin: 0 5px;
         background-color: #bbb;
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
     }
 
-    .active {
+    .active, .dot:hover {
         background-color: #717171;
+    }
+
+    /* Example media query for smaller screens */
+    @media (max-width: 768px) {
+        .slideshow-img {
+            max-height: 400px; /* Example adjustment for smaller screens */
+        }
     }
 </style>
 </head>
 <body>
 
 <div class="slideshow-container">
-<!-- Slides -->
-<div class="mySlides">
-    <img src="assets/nc9team.jpg" alt="Slide 1" class="slideshow-img">
-</div>
+    <!-- Slides -->
+    <div class="mySlides">
+        <img src="assets/nc9team.jpg" alt="Slide 1" class="slideshow-img">
+    </div>
 
-<div class="mySlides">
-    <img src="assets/kiddos.jpg" alt="Slide 2" class="slideshow-img">
-</div>
+    <div class="mySlides">
+        <img src="assets/kiddos.jpg" alt="Slide 2" class="slideshow-img">
+    </div>
 
-<div class="mySlides">
-    <img src="assets/nc9tourney.jpg" alt="Slide 3" class="slideshow-img">
-</div>
+    <div class="mySlides">
+        <img src="assets/nc9tourney.jpg" alt="Slide 3" class="slideshow-img">
+    </div>
+
+    <!-- Navigation dots -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 </div>
 
 <script>
-// JavaScript for Slideshow (optional)
+// JavaScript for Slideshow
 let slideIndex = 0;
 showSlides();
 
 function showSlides() {
     let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
     slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides();
 }
 </script>
 
-</body>
-</html>
 
 <!-- Footer-->
         <footer class="py-4 mt-auto">
