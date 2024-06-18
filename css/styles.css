@@ -3651,7 +3651,7 @@ textarea.form-control-lg {
 }
 
 body {
-  background: linear-gradient(-45deg, #335380, #1c2d4e, #262f44, #161c27);
+  background: linear-gradient(-45deg, #2d4361, #484f5e, #262f44, #161c27);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100%;
