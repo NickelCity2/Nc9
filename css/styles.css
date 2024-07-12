@@ -614,9 +614,20 @@ progress {
   content: "— ";
 }
 
+/* Logo container styling */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjust height for different screen sizes */
+}
+
+
+
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-width: 600px; /* Limit maximum width for larger screens */
 }
 
 .img-thumbnail {
