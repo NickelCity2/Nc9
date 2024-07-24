@@ -3716,6 +3716,31 @@ textarea.form-control-lg {
   }  
 }
 
+.card-custom {
+  background-color: #f8f9fa; /* Background color to match Nick's card */
+  border: none; /* Remove default card border */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow to add depth */
+  padding: 2rem; /* Consistent padding */
+}
+
+.card-custom .card-body {
+  padding: 0; /* Remove default padding */
+}
+
+.card-custom .card-title {
+  font-weight: bold; /* Font weight for titles */
+  color: #000; /* Text color for titles */
+}
+
+.card-custom .card-subtitle {
+  color: #6c757d; /* Subtle color for subtitles */
+}
+
+.card-custom .card-img-top {
+  border-radius: 1rem; /* Match border radius of card */
+}
+
 body {
   background: linear-gradient(-45deg, #425774, #3f4e72, #161c27,#ffc107)repeat center center fixed;
   background-size: 400% 400%;
