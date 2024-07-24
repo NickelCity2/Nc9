@@ -3732,6 +3732,9 @@ textarea.form-control-lg {
   font-weight: bold; /* Font weight for titles */
   color: #000; /* Text color for titles */
 }
+.navbar-brand, .nav-link, .text-warning, .text-white, .text-black {
+  font-family: 'Oswald', sans-serif;
+}
 
 .card-custom .card-subtitle {
   color: #6c757d; /* Subtle color for subtitles */
