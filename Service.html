@@ -19,7 +19,26 @@
     </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
+<!-- CSS for responsiveness -->
+<style>
+    /* Ensuring the text scales with the screen size */
+    .fs-3 {
+        font-size: 1.6vw; /* Font size scales with viewport width */
+    }
 
+    /* Ensuring icons and gap scale with the screen size */
+    .d-flex {
+        font-size: 1.6vw; /* Font size scales with viewport width */
+        gap: 2.5vw; /* Gap scales with viewport width */
+    }
+
+    /* Responsive font size for smaller screens */
+    @media (max-width: 600px) {
+        .fs-3, .d-flex {
+            font-size: 4vw; /* Increase font size for smaller screens */
+        }
+    }
+</style>
              <!-- Navigation-->
              <nav class="navbar navbar-expand-lg navbar-light py-3">
                 <div class="container px-5">
@@ -28,7 +47,6 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                                <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
                                 <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
                                 <li class="nav-item"><a class="nav-link text-warning" href="Shop.html">Shop</a></li>
                                 <li class="nav-item"><a class="nav-link text-warning" href="upcoming events.html">Upcoming Events</a></li>

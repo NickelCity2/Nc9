@@ -19,20 +19,43 @@
     </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
+
+            <!-- CSS for responsiveness -->
+<style>
+    /* Ensuring the text scales with the screen size */
+    .fs-3 {
+        font-size: 1.6vw; /* Font size scales with viewport width */
+    }
+
+    /* Ensuring icons and gap scale with the screen size */
+    .d-flex {
+        font-size: 1.6vw; /* Font size scales with viewport width */
+        gap: 2.5vw; /* Gap scales with viewport width */
+    }
+
+    /* Responsive font size for smaller screens */
+    @media (max-width: 600px) {
+        .fs-3, .d-flex {
+            font-size: 4vw; /* Increase font size for smaller screens */
+        }
+    }
+</style>
+       <!-- Navigation-->
        <!-- Navigation-->
        <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container px-5">
-            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-warning"></span></a>
+            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-warning">Nickel City Nine Baseball LLC.</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                    <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning" href="Shop.html">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning" href="upcoming events.html">Upcoming Events</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning" href="fallleague.html">2024 Schedules</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning" href="Service.html">Services & Policies</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning" href="contact.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning" href="staff.html">About Us</a></li>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="Shop.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="upcoming events.html">Upcoming Events</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="fallleague.html">2024 Schedules</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="Service.html">Services & Policies</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="staff.html">About Us</a></li>
                 </ul>
             </div>
         </div>
