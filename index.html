@@ -150,47 +150,45 @@
 <div class="container mb-5"> <!-- Added margin-bottom -->
     <div class="row justify-content-center logo-container">
         <div class="col-12 text-center mb-1">
-            <img src="assets/nc99-removebg-preview.png" alt="Logo" class="img-fluid" style="max-width: 100%; height: auto;">
+            <img src="assets/nc99-removebg-preview.png" alt="Logo" class="img-fluid" style="max-width: 50%; max-height: 210px; height: auto;">
         </div>
     </div>
 </div>
 
 <!-- Moved elements down -->
-<div style="margin-top: 100px;"> <!-- Adjust this value to move elements down -->
-    <div class="fs-3 fw-light text-warning text-center mb-4">Providing Individual, Group, and Team Instruction Since 2012</div>
-    <div class="d-grid gap-3 d-sm-flex justify-content-center mb-2">
-        <div class="d-flex justify-content-center fs-2 gap-4">
-            <a class="text-white text-center" href="https://www.x.com/nc9baseball"><i class="bi-twitter"></i></a>
-            <a class="text-white text-center" href="https://www.facebook.com/nc9baseball/"><i class="bi bi-facebook"></i></a>
+<div style="margin-top: 5vh;"> <!-- Use viewport height for vertical spacing -->
+    <div class="fs-3 fw-light text-warning text-center" style="font-size: 2vw;">Providing Individual, Group, and Team Instruction Since 2012</div>
+    <div class="d-grid gap-3 d-sm-flex justify-content-center" style="margin-bottom: 2vh;">
+        <div class="d-flex justify-content-center" style="font-size: 2vw; gap: 2vw;">
+            <a class="text-white text-center" href="https://www.x.com/nc9baseball" style="font-size: inherit;"><i class="bi-twitter"></i></a>
+            <a class="text-white text-center" href="https://www.facebook.com/nc9baseball/" style="font-size: inherit;"><i class="bi bi-facebook"></i></a>
         </div>
     </div>
 </div>
-</div>
-</header>
 
 <!-- Slideshow-->
-<div class="slideshow-container">
-<!-- Slides -->
-<div class="mySlides">
-<img src="assets/Lancers.PNG" alt="Slide 1" class="slideshow-img">
-</div>
-<div class="mySlides">
-<img src="assets/IMG_0867.JPG" alt="Slide 2" class="slideshow-img">
-</div>
-<div class="mySlides">
-<img src="assets/IMG_0104.JPG" alt="Slide 3" class="slideshow-img">
-</div>
-<div class="mySlides">
-<img src="assets/nc9tourney.jpg" alt="Slide 4" class="slideshow-img">
-</div>
+<div class="slideshow-container" style="margin-top: 20px;"> <!-- Added margin-top for spacing -->
+    <!-- Slides -->
+    <div class="mySlides" style="display: none;">
+        <img src="assets/Lancers.PNG" alt="Slide 1" class="slideshow-img" style="width: 100%; max-height: 500px; object-fit: cover;">
+    </div>
+    <div class="mySlides" style="display: none;">
+        <img src="assets/IMG_0867.JPG" alt="Slide 2" class="slideshow-img" style="width: 100%; max-height: 500px; object-fit: cover;">
+    </div>
+    <div class="mySlides" style="display: none;">
+        <img src="assets/IMG_0104.JPG" alt="Slide 3" class="slideshow-img" style="width: 100%; max-height: 500px; object-fit: cover;">
+    </div>
+    <div class="mySlides" style="display: none;">
+        <img src="assets/nc9tourney.jpg" alt="Slide 4" class="slideshow-img" style="width: 100%; max-height: 500px; object-fit: cover;">
+    </div>
 </div>
 
 <!-- Navigation dots -->
-<div class="dot-container">
-<span class="dot" onclick="currentSlide(1)"></span>
-<span class="dot" onclick="currentSlide(2)"></span>
-<span class="dot" onclick="currentSlide(3)"></span>
-<span class="dot" onclick="currentSlide(4)"></span>
+<div class="dot-container" style="text-align: center; margin-top: 10px;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
 </div>
 
 <script>
@@ -200,37 +198,33 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-showSlides(slideIndex = n);
+    showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-console.log("Showing slide: " + n); // Debug log
-let slides = document.getElementsByClassName("mySlides");
-let dots = document.getElementsByClassName("dot");
-
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-
-for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-}
-
-for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-}
-
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
 }
 
 function autoSlides() {
-plusSlides(1);
-setTimeout(autoSlides, 5000); // Change image every 5 seconds
+    plusSlides(1);
+    setTimeout(autoSlides, 5000); // Change image every 5 seconds
 }
 
 // Start automatic slide show
@@ -238,14 +232,13 @@ setTimeout(autoSlides, 5000);
 </script>
 </main>
 
-
 <!-- Footer-->
 <footer class="py-4 mt-auto">
-<div class="container px-5">
-<div class="row align-items-center justify-content-between flex-column flex-sm-row">
-    <div class="col-auto"><div class="small text-white m-0">Copyright &copy; Nickel City Nine Baseball LLC.</div></div>
-</div>
-</div>
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto"><div class="small text-white m-0">Copyright &copy; Nickel City Nine Baseball LLC.</div></div>
+        </div>
+    </div>
 </footer>
 
 <!-- Bootstrap core JS-->
