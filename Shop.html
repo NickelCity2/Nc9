@@ -304,64 +304,88 @@
                             </div>
                         </main>
                     
-                        <!-- Sidebar -->
-                        <div id="mySidebar" class="sidebar">
-                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                            <div class="cart">
-                                <h2>Cart</h2>
-                                <div id="cart-items"></div>
-                                <div>
-                                    <strong>Total: $<span id="cart-total">0.00</span></strong>
-                                </div>
-                                <button id="checkout-button">Request</button>
-                            </div>
-                        </div>
-                    
-                        <header>
-                            <button class="openbtn" onclick="openNav()">Cart</button>
-                        </header>
+                          <!-- Sidebar -->
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="cart">
+                <h2>Cart</h2>
+                <div id="cart-items"></div>
+                <div>
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+                <button id="checkout-button">Request</button>
+            </div>
+        </div>
 
-                        <script>
-                            const cart = [];
-                            let total = 0;
-                    
-                            function openNav() {
-                                document.getElementById("mySidebar").style.width = "300px";
-                            }
-                    
-                            function closeNav() {
-                                document.getElementById("mySidebar").style.width = "0";
-                            }
-                    
-                            function addToCart(name, price) {
-                                cart.push({ name, price });
-                                total += price;
-                                renderCart();
-                                openNav(); // Open the cart when an item is added
-                            }
-                    
-                            function removeFromCart(index) {
-                                total -= cart[index].price;
-                                cart.splice(index, 1);
-                                renderCart();
-                            }
-                    
-                            function renderCart() {
-                                const cartItems = document.getElementById('cart-items');
-                                cartItems.innerHTML = '';
-                                cart.forEach((item, index) => {
-                                    const div = document.createElement('div');
-                                    div.className = 'cart-item';
-                                    div.innerHTML = `
-                                        <span>${item.name} - $${item.price.toFixed(2)}</span>
-                                        <button onclick="removeFromCart(${index})">Remove</button>
-                                    `;
-                                    cartItems.appendChild(div);
-                                });
-                                document.getElementById('cart-total').innerText = total.toFixed(2);
-                            }
-                        </script>
-                    </body>
+        <header>
+            <button class="openbtn" onclick="openNav()">Cart</button>
+        </header>
+
+        <script>
+            const cart = [];
+            let total = 0;
+
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "300px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+            }
+
+            function addToCart(name, price) {
+                cart.push({ name, price });
+                total += price;
+                renderCart();
+                openNav(); // Open the cart when an item is added
+            }
+
+            function removeFromCart(index) {
+                total -= cart[index].price;
+                cart.splice(index, 1);
+                renderCart();
+            }
+
+            function renderCart() {
+                const cartItems = document.getElementById('cart-items');
+                cartItems.innerHTML = '';
+                cart.forEach((item, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'cart-item';
+                    div.innerHTML = `
+                        <span>${item.name} - $${item.price.toFixed(2)}</span>
+                        <button onclick="removeFromCart(${index})">Remove</button>
+                    `;
+                    cartItems.appendChild(div);
+                });
+                document.getElementById('cart-total').innerText = total.toFixed(2);
+            }
+
+            document.getElementById('checkout-button').addEventListener('click', () => {
+                const email = "joebarberio@nc9baseball.com";
+                let emailBody = "Order details:\n\n";
+
+                cart.forEach(item => {
+                    emailBody += `${item.name}: $${item.price.toFixed(2)}\n`;
+                });
+
+                emailBody += `\nTotal: $${total.toFixed(2)}`;
+
+                const mailtoLink = `mailto:${email}?subject=Order Request&body=${encodeURIComponent(emailBody)}`;
+                window.location.href = mailtoLink;
+            });
+        </script>
+
+        <!-- Footer-->
+        <footer class="py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">**All items requested will be fulfilled by staff at NC9- Payment and pickup done in person**</div></div>
+                    <div class="col-auto">
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!-- Footer-->
         <footer class="py-4 mt-auto">
