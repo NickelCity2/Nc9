@@ -147,27 +147,44 @@
 
   
 <!-- Logo -->
-<div class="container mb-5"> <!-- Added margin-bottom -->
+<div class="container mb-2"> <!-- Added margin-bottom -->
     <div class="row justify-content-center logo-container">
         <div class="col-12 text-center mb-1">
-            <img src="assets/nc99-removebg-preview.png" alt="Logo" class="img-fluid" style="max-width: 50%; max-height: 210px; height: auto;">
+            <img src="assets/nc99-removebg-preview.png" alt="Logo" class="img-fluid" style="max-width: 65%; max-height: 270px; height: auto;">
+            <div class="fs-2 fw-light text-warning text-center" style="font-size: 1.5vw;">Providing Individual, Group, and Team Instruction Since 2012</div>
+            <div class="d-flex justify-content-center" style="font-size: 2.5vw; gap: 2.5vw;">
+                <a class="text-white text-center" href="https://www.x.com/nc9baseball" style="font-size: inherit;"><i class="bi-twitter"></i></a>
+                <a class="text-white text-center" href="https://www.facebook.com/nc9baseball/" style="font-size: inherit;"><i class="bi bi-facebook"></i></a>
         </div>
     </div>
 </div>
 
 <!-- Moved elements down -->
-<div style="margin-top: 5vh;"> <!-- Use viewport height for vertical spacing -->
-    <div class="fs-3 fw-light text-warning text-center" style="font-size: 2vw;">Providing Individual, Group, and Team Instruction Since 2012</div>
-    <div class="d-grid gap-3 d-sm-flex justify-content-center" style="margin-bottom: 2vh;">
-        <div class="d-flex justify-content-center" style="font-size: 2vw; gap: 2vw;">
-            <a class="text-white text-center" href="https://www.x.com/nc9baseball" style="font-size: inherit;"><i class="bi-twitter"></i></a>
-            <a class="text-white text-center" href="https://www.facebook.com/nc9baseball/" style="font-size: inherit;"><i class="bi bi-facebook"></i></a>
-        </div>
     </div>
 </div>
 
+<!-- CSS for responsiveness -->
+<style>
+    /* Ensuring the text scales with the screen size */
+    .fs-3 {
+        font-size: 1.6vw; /* Font size scales with viewport width */
+    }
+
+    /* Ensuring icons and gap scale with the screen size */
+    .d-flex {
+        font-size: 1.6vw; /* Font size scales with viewport width */
+        gap: 2.5vw; /* Gap scales with viewport width */
+    }
+
+    /* Responsive font size for smaller screens */
+    @media (max-width: 600px) {
+        .fs-3, .d-flex {
+            font-size: 4vw; /* Increase font size for smaller screens */
+        }
+    }
+</style>
 <!-- Slideshow-->
-<div class="slideshow-container" style="margin-top: 20px;"> <!-- Added margin-top for spacing -->
+<div class="slideshow-container" style="margin-top: 280px;"> <!-- Added margin-top for spacing -->
     <!-- Slides -->
     <div class="mySlides" style="display: none;">
         <img src="assets/Lancers.PNG" alt="Slide 1" class="slideshow-img" style="width: 100%; max-height: 500px; object-fit: cover;">
