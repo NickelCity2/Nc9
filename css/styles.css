@@ -3752,6 +3752,12 @@ body {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .logo-container img {
+      max-width: 300px; /* Adjust as needed */
+  }
+}
+
 @keyframes gradient {
   0% {
       background-position: 0% 50%;
