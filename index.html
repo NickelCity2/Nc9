@@ -58,18 +58,19 @@
         }
 
         .slideshow-container {
-            max-width: 100%; /* Ensure it doesn't exceed container width */
-            margin: 20px auto; /* Center the container and add margin */
+            max-width: 80%; /* Limit the maximum width */
+            margin: 0 auto; /* Center the container horizontally */
             overflow: hidden;
             position: relative;
             background-color: lightgray; /* Temporary background color for debugging */
+            aspect-ratio: 16 / 9; /* Maintain aspect ratio of 16:9 */
+            min-height: 300px; /* Ensure a minimum height */
         }
 
         .slideshow-img {
             width: 100%;
-            height: auto; /* Maintain aspect ratio */
-            max-height: 500px; /* Limit maximum height */
-            object-fit: cover; /* Prevent stretching */
+            height: 100%; /* Ensure it takes full height */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
         }
 
         .dot-container {
@@ -99,7 +100,9 @@
             }
 
             .slideshow-container {
-                margin-top: 10px; /* Reduce margin-top for mobile */
+                margin-top: 10px; /* Adjust margin for mobile */
+                max-width: 90%; /* Increase width limit for mobile screens */
+                aspect-ratio: 4 / 3; /* Change aspect ratio for mobile */
             }
 
             .logo-container {
@@ -136,8 +139,8 @@
                     <img src="assets/nc99-removebg-preview.png" alt="Logo" class="img-fluid" style="max-width: 50%; max-height: 290px; height: auto;">
                     <div class="fs-2 fw-light text-warning text-center" style="font-size: 1.5vw;">Providing Individual, Group, and Team Instruction Since 2012</div>
                     <div class="d-flex justify-content-center" style="font-size: 3.5vw; gap: 2.5vw;">
-                        <a class="text-white text-center" href="https://www.x.com/nc9baseball" style="font-size: 60%;"><i class="bi-twitter"></i></a>
-                        <a class="text-white text-center" href="https://www.facebook.com/nc9baseball/" style="font-size: 60%;"><i class="bi bi-facebook"></i></a>
+                        <a class="text-white text-center" href="https://www.x.com/nc9baseball" style="font-size: 80%;"><i class="bi-twitter"></i></a>
+                        <a class="text-white text-center" href="https://www.facebook.com/nc9baseball/" style="font-size: 80%;"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
             </div>
@@ -147,16 +150,13 @@
         <div class="slideshow-container">
             <!-- Slides -->
             <div class="mySlides" style="display: none;">
-                <img src="assets/Lancers.PNG" alt="Slide 1" class="slideshow-img">
+                <img src="assets/IMG_0867.JPG" alt="Slide 1" class="slideshow-img">
             </div>
             <div class="mySlides" style="display: none;">
-                <img src="assets/IMG_0867.JPG" alt="Slide 2" class="slideshow-img">
+                <img src="assets/IMG_0104.JPG" alt="Slide 2" class="slideshow-img">
             </div>
             <div class="mySlides" style="display: none;">
-                <img src="assets/IMG_0104.JPG" alt="Slide 3" class="slideshow-img">
-            </div>
-            <div class="mySlides" style="display: none;">
-                <img src="assets/nc9tourney.jpg" alt="Slide 4" class="slideshow-img">
+                <img src="assets/nc9tourney.jpg" alt="Slide 3" class="slideshow-img">
             </div>
         </div>
 
@@ -165,7 +165,7 @@
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
+
         </div>
 
         <script>
