@@ -108,6 +108,26 @@
         width: 100%;
         height: 100%;
     }
+
+       /* Facebook feed container styles */
+       .social-media-feed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 70px 0;
+        }
+
+        .fb-page {
+            width: 100%; /* Adjust width to be responsive */
+            max-width: 1000px; /* Set a max width */
+        }
+ /* Responsive font size for smaller screens */
+ @media (max-width: 600px) {
+            .fs-3, .d-flex {
+                font-size: 4vw; /* Increase font size for smaller screens */
+            }
+        }
+
 }
     </style>
 </head>
@@ -150,13 +170,13 @@
         <div class="slideshow-container">
             <!-- Slides -->
             <div class="mySlides" style="display: none;">
-                <img src="assets/IMG_0867.JPG" alt="Slide 1" class="slideshow-img">
+                <img src="assets/summerball2024.png" alt="Slide 1" class="slideshow-img">
             </div>
             <div class="mySlides" style="display: none;">
                 <img src="assets/IMG_0104.JPG" alt="Slide 2" class="slideshow-img">
             </div>
             <div class="mySlides" style="display: none;">
-                <img src="assets/nc9tourney.jpg" alt="Slide 3" class="slideshow-img">
+                <img src="assets/team.png" alt="Slide 3" class="slideshow-img">
             </div>
         </div>
 
@@ -208,6 +228,28 @@
         setTimeout(autoSlides, 5000);
         </script>
     </main>
+
+   <!-- Facebook Feed -->
+   <div class="social-media-feed">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"></script>
+    <div class="fb-page" 
+         data-href="https://www.facebook.com/nc9baseball/" 
+         data-tabs="timeline" 
+         data-width="1000" 
+         data-height="1200" 
+         data-small-header="false" 
+         data-adapt-container-width="true" 
+         data-hide-cover="false" 
+         data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/nc9baseball/" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/nc9baseball/">Nickel City Nine Baseball</a>
+        </blockquote>
+    </div>
+</div>
+</main>
+
+
 
     <!-- Footer-->
     <footer class="py-4 mt-auto">
