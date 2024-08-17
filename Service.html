@@ -36,9 +36,14 @@
             font-size: 1.6vw; /* Font size scales with viewport width */
             gap: 2.5vw; /* Gap scales with viewport width */
         }
+
+        /* Increase image size on mobile screens */
         @media (max-width: 600px) {
             .fs-3, .d-flex {
                 font-size: 4vw; /* Increase font size for smaller screens */
+            }
+            .img-fluid {
+                max-width: 200%; /* Increase image size */
             }
         }
     </style>
