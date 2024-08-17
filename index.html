@@ -94,7 +94,7 @@
         }
 
         /* CSS for responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .slideshow-container {
         max-width: 100%; /* Ensure the container takes up full width */
         margin: 0 auto; /* Center the container */
@@ -108,23 +108,19 @@
         width: 100%;
         height: 100%;
     }
-
-       /* Facebook feed container styles */
-       .social-media-feed {
-        position: fixed;
-        top: 20px; /* Adjust the vertical position */
-        right: 20px; /* Adjust the horizontal position */
-        z-index: 1000; /* Ensure it stays on top of other content */
-        width: 300px; /* Adjust width if needed */
-        height: 500px; /* Adjust height if needed */
-        background-color: white; /* Optional: Add a background color */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    @media (max-width: 768px) {
+        .social-media-feed {
+            position: static;
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
     }
 
          /* Ensure Facebook feed is responsive */
     .fb-page {
         width: 100%;
-        height: 100%;
+        height: 500px;
     }
  /* Responsive font size for smaller screens */
  @media (max-width: 600px) {
@@ -157,6 +153,27 @@
             </div>
         </nav>
 
+
+  <!-- Facebook Feed -->
+  <div class="social-media-feed">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"></script>
+    <div class="fb-page" 
+         data-href="https://www.facebook.com/nc9baseball/" 
+         data-tabs="timeline" 
+         data-width="400" 
+         data-height="600" 
+         data-small-header="false" 
+         data-adapt-container-width="true" 
+         data-hide-cover="false" 
+         data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/nc9baseball/" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/nc9baseball/">Nickel City Nine Baseball</a>
+        </blockquote>
+    </div>
+</div>
+
+
         <!-- Logo -->
         <div class="container mb-2">
             <div class="row justify-content-center logo-container">
@@ -170,6 +187,9 @@
                 </div>
             </div>
         </div>
+
+
+
 
         <!-- Slideshow-->
         <div class="slideshow-container">
@@ -233,26 +253,6 @@
         setTimeout(autoSlides, 5000);
         </script>
     </main>
-
-  <!-- Facebook Feed -->
-<div class="social-media-feed">
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"></script>
-    <div class="fb-page" 
-         data-href="https://www.facebook.com/nc9baseball/" 
-         data-tabs="timeline" 
-         data-width="400" 
-         data-height="600" 
-         data-small-header="false" 
-         data-adapt-container-width="true" 
-         data-hide-cover="false" 
-         data-show-facepile="true">
-        <blockquote cite="https://www.facebook.com/nc9baseball/" class="fb-xfbml-parse-ignore">
-            <a href="https://www.facebook.com/nc9baseball/">Nickel City Nine Baseball</a>
-        </blockquote>
-    </div>
-</div>
-
 
 
     <!-- Footer-->
