@@ -29,25 +29,35 @@
         }
 
         .navbar-nav .nav-link {
-        font-size: 20px !important;
-    }
+            font-size: 20px !important;
+        }
 
         /* Additional styling for layout */
         .fs-3 {
             font-size: 1.6vw; /* Font size scales with viewport width */
         }
+
         .d-flex {
             font-size: 1.6vw; /* Font size scales with viewport width */
             gap: 2.5vw; /* Gap scales with viewport width */
         }
 
         /* Increase image size on mobile screens */
-        @media (max-width: 800px) {
+        @media (max-width: 1000px) {
             .fs-3, .d-flex {
                 font-size: 6vw; /* Increase font size for smaller screens */
             }
             .img-fluid {
-                max-width: 700%; /* Increase image size */
+                max-width: 100%; /* Ensure image scales with container */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+
+        /* Ensure flyer image is larger on mobile devices */
+        @media (max-width: 768px) {
+            .img-fluid {
+                max-width: 100%; /* Full width of the container */
+                height: auto; /* Adjust height automatically */
             }
         }
     </style>
@@ -131,7 +141,6 @@
                             <h2 class="display-5 fw-bolder"><span class="text-black d-inline text-center">Lesson Package Policy</span></h2>
                             <div class="small fw-bolder text-black">
                                 Effective September 2, 2024, Nickel City Nine Baseball LLC. will introduce new lesson package options for our clients. All weekly lessons will be available exclusively in packages of 3, 5, and 10 sessions.
-                                <div></div>
                                 <div></div>
                                 Cancellation Policy:
                                 <div></div>
