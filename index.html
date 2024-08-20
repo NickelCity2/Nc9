@@ -77,17 +77,31 @@
         }
 
         .slideshow-container {
-            width: 100%;
-            max-width: 70%; /* Adjust width for side-by-side layout */
-            overflow: hidden;
-            position: relative;
-            background-color: lightgray; /* Temporary background color for debugging */
-            aspect-ratio: 16 / 9; /* Maintain aspect ratio of 16:9 */
-            min-height: 200px; /* Minimum height for smaller screens */
-            border: 5px solid white; /* White border around the slideshow */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for a 3D effect */
-            margin-right: 20px; /* Spacing between slideshow and Facebook feed */
-        }
+    width: 100%;
+    max-width: 70%;
+    margin-right: 20px;
+    position: relative;
+    background-color: lightgray; /* This will not be visible with object-fit: cover */
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio of 16:9 */
+    min-height: 200px;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    display: block; /* Ensure images take up the full space of the container */
+}
 
         .dot-container {
             text-align: center;
@@ -201,22 +215,22 @@
                 <div class="col-md-8">
                     <div id="slideshow-section" class="slideshow-container">
                         <div class="mySlides">
-                            <img src="assets/IMG_0102.JPG" alt="Slide 1" class="slideshow-img">
+                            <img src="assets/NC9 - Bulletproof team photo.jpg" alt="Slide 1" class="slideshow-img">
                         </div>
                         <div class="mySlides" style="display: none;">
-                            <img src="assets/IMG_0104.JPG" alt="Slide 2" class="slideshow-img">
+                            <img src="assets/NC9 Grey Fall team photo.jpg" alt="Slide 2" class="slideshow-img">
                         </div>
                         <div class="mySlides" style="display: none;">
-                            <img src="assets/team.png" alt="Slide 3" class="slideshow-img" style="object-position: center;">
+                            <img src="assets/NC9 white-navy fall team photo.jpg" alt="Slide 3" class="slideshow-img" style="object-position: center;">
                         </div>
                         <div class="mySlides" style="display: none;">
-                            <img src="assets/NC9 - Bulletproof team photo.jpg" alt="Slide 4" class="slideshow-img">
+                            <img src="assets/Jim & RL Fall.jpg" alt="Slide 4" class="slideshow-img">
                         </div>
                         <div class="mySlides" style="display: none;">
-                            <img src="assets/NC9 white-navy fall team photo.jpg" alt="Slide 5" class="slideshow-img">
+                            <img src="assets/summerball2024.png" alt="Slide 5" class="slideshow-img">
                         </div>
                         <div class="mySlides" style="display: none;">
-                            <img src="assets/Coaches Picture.JPG" alt="Slide 6" class="slideshow-img">
+                            <img src="assets/IMG_0867.JPG" alt="Slide 6" class="slideshow-img">
                         </div>
                     </div>
                 </div>
@@ -251,65 +265,44 @@
         </div>
 
         <script>
-            // JavaScript to handle tab switching
-            function showSection(section) {
-                // Hide both sections
-                document.getElementById('slideshow-section').style.display = 'none';
-                document.getElementById('facebook-section').style.display = 'none';
-                document.getElementById('slideshow-dots').style.display = 'none';
+           let slideIndex = 1;
+        showSlides(slideIndex);
 
-                // Show the selected section
-                if (section === 'slideshow') {
-                    document.getElementById('slideshow-section').style.display = 'block';
-                    document.getElementById('slideshow-dots').style.display = 'block';
-                } else if (section === 'facebook') {
-                    document.getElementById('facebook-section').style.display = 'block';
-                }
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-
-            // Initialize with the slideshow visible
-            showSection('slideshow');
-
-            // Existing slideshow JavaScript remains unchanged
-            let slideIndex = 1; // Start with the first slide
-            showSlides(slideIndex);
-
-            // Next/previous controls
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
             }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
 
-            // Thumbnail image controls
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
 
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                if (n > slides.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
-            }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
 
-            function autoSlides() {
-                plusSlides(1);
-                setTimeout(autoSlides, 5000); // Change image every 5 seconds
-            }
+        function autoSlides() {
+            plusSlides(1);
+            setTimeout(autoSlides, 5000); // Change image every 5 seconds
+        }
 
-            // Start automatic slide show
-            setTimeout(autoSlides, 5000);
-        </script>
-    </main>
+        // Initialize automatic slide show
+        setTimeout(autoSlides, 5000);
 
+       
+        
+        createDots();
+    </script>
     <!-- Footer -->
     <footer class="py-4 mt-auto">
         <div class="container px-5">
