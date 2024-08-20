@@ -45,7 +45,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            margin-top: 20px;
+            margin-top: 0px;
         }
 
         .logo-text {
@@ -162,17 +162,20 @@
             }
         }
 
-        /* Adjust slideshow container height on smaller screens */
-        @media (max-width: 768px) {
-            .slideshow-container {
-                min-height: 300px; /* Ensure a reasonable height for tablets */
-            }
-        }
+      /* Responsive adjustments */
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 90%; /* Allow more space on smaller screens */
+        min-height: 150px; /* Adjust height for smaller screens */
+    }
+}
 
-        @media (max-width: 576px) {
-            .slideshow-container {
-                min-height: 200px; /* Further reduce height on very small screens */
-            }
+@media (max-width: 576px) {
+    .slideshow-container {
+        max-width: 100%; /* Full width on very small screens */
+        min-height: 100px; /* Further adjust height */
+    }
+
         }
     </style>
 </head>
@@ -202,7 +205,7 @@
                 <div class="col-12 text-center mb-1">
                     <img src="assets/nc99-removebg-preview.png" alt="Logo" class="img-fluid" style="max-width: 35%; max-height: 350px; height: auto;">
                     <div class="fs-2 fw-light text-warning text-center" style="font-size: 1.5vw;">Providing Individual, Group, and Team Instruction Since 2012</div>
-                    <div class="d-flex justify-content-center" style="font-size: 3.5vw; gap: 2.5vw; margin-bottom: 1.5vw;">
+                    <div class="d-flex justify-content-center" style="font-size: 3.5vw; gap: 2.5vw; margin-bottom: 2.5vw;">
                         <a class="text-white text-center" href="https://www.x.com/nc9baseball" style="font-size: 50%;"><i class="bi-twitter"></i></a>
                         <a class="text-white text-center" href="https://www.facebook.com/nc9baseball/" style="font-size: 50%;"><i class="bi bi-facebook"></i></a>
                     </div>
