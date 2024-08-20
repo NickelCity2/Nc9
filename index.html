@@ -124,8 +124,7 @@
             background-color: #717171;
         }
 
-        /* Responsive adjustments */
-@media (max-width: 768px) {
+        @media (max-width: 768px) {
     .logo-container img {
         max-height: 1000px;
         max-width: 100%;
@@ -143,6 +142,15 @@
     .slideshow-container {
         max-width: 90%;
         height: 200px; /* Adjust height for tablets */
+    }
+
+    .facebook-feed-container {
+        margin-top: 20px; /* Add margin to create space between the slideshow and social media feed */
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
     }
 }
 
@@ -172,18 +180,15 @@
         min-height: 50px; /* Further adjust height for small screens */
     }
 
+    .facebook-feed-container {
+        margin-top: 20px; /* Add margin to create space between the slideshow and social media feed */
+    }
+
     .dot {
         height: 10px;
         width: 10px;
     }
 }
-
-@media (max-width: 600px) {
-    .fs-3, .d-flex {
-        font-size: 4vw;
-    }
-}
-
     </style>
 </head>
 <body class="d-flex flex-column h-100">
