@@ -160,6 +160,39 @@
                 max-width: 100%;
                 height: auto; 
             }
+            @media (max-width: 768px) {
+    .logo-container img {
+        max-height: 300px; /* Adjust height for smaller screens */
+        max-width: 80%; /* Allow the logo to be larger */
+        height: auto; 
+        width: auto; /* Ensure it scales correctly */
+    }
+
+    .fs-2 {
+        font-size: 4.5vw;
+    }
+
+    .d-flex {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-container img {
+        max-height: none; /* Remove max-height to let it grow */
+        max-width: 100%; /* Allow it to fill up to 100% of the container */
+        width: 90%; /* Ensure it's almost full width but with some padding */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .fs-2 {
+        font-size: 6vw; /* Adjust size for smaller screens */
+    }
+
+    .d-flex a {
+        font-size: 8vw; /* Make icons larger */
+    }
+}
 
             /* Adjust logo sizes on mobile */
             .d-flex a {
