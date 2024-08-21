@@ -47,10 +47,15 @@
             margin: 70px 0;
         }
 
-        .fb-page {
-            width: 100%; /* Adjust width to be responsive */
-            max-width: 1000px; /* Set a max width */
+  /* Center button on mobile screens */
+  @media (max-width: 768px) {
+        .text-center .btn-lg {
+            display: block;
+            margin: 0 auto; /* Centers the button */
+            width: 100%; /* Make the button full width on mobile, adjust as needed */
+            text-align: center;
         }
+    }
 
         /* Make the images bigger */
         .img-fluid {
