@@ -99,15 +99,24 @@
         }
 
 
-  /* Center button on mobile screens */
-  @media (max-width: 768px) {
-        .text-center .btn-lg {
-            display: block;
-            margin: 0 auto; /* Centers the button */
-            width: 100%; /* Make the button full width on mobile, adjust as needed */
-            text-align: center;
-        }
+  
+/* Ensure text fits within the button on smaller screens */
+@media (max-width: 768px) {
+    .btn {
+        padding: 10px 15px;  /* Reduce padding for smaller screens */
+        font-size: 14px;  /* Adjust font size for smaller screens */
     }
+}
+
+/* Center button on mobile screens */
+@media (max-width: 768px) {
+    .text-center .btn-lg {
+        display: block;
+        margin: 0 auto;  /* Centers the button */
+        width: 100%;  /* Make the button full width on mobile, adjust as needed */
+        text-align: center;
+    }
+}
 </style>
        
        <!-- Navigation-->
