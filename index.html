@@ -77,32 +77,32 @@
         }
 
         .slideshow-container {
-    width: 200%;
-    height: 600px;
-    max-width: 100%;
-    margin-right: 10px;
-    position: relative;
-    background-color: lightgray; /* This will not be visible with object-fit: cover */
-    aspect-ratio: 16 / 9; /* Maintain aspect ratio of 16:9 */
-    min-height: 300px;
-    border: 5px solid white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
+            width: 200%;
+            height: 600px;
+            max-width: 100%;
+            margin-right: 10px;
+            position: relative;
+            background-color: lightgray; /* This will not be visible with object-fit: cover */
+            aspect-ratio: 16 / 9; /* Maintain aspect ratio of 16:9 */
+            min-height: 300px;
+            border: 5px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
 
-.mySlides {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+        .mySlides {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
 
-.mySlides img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire container */
-    display:block ; /* Ensure images take up the full space of the container */
-}
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire container */
+            display:block ; /* Ensure images take up the full space of the container */
+        }
 
         .dot-container {
             text-align: center;
@@ -124,71 +124,77 @@
             background-color: #717171;
         }
 
-       @media (max-width: 768px) {
-    .logo-container img {
-        max-height: 1000px;
-        max-width: 100%;
-        height: auto; 
-    }
+        @media (max-width: 768px) {
+            .logo-container img {
+                max-height: 300px; /* Adjust height for smaller screens */
+                max-width: 80%; /* Allow the logo to be larger */
+                height: auto; 
+            }
 
-    .fs-2 {
-        font-size: 4.5vw;
-    }
+            .fs-2 {
+                font-size: 4.5vw;
+            }
 
-    .d-flex {
-        font-size: 5vw;
-    }
+            .d-flex {
+                font-size: 5vw;
+            }
 
-    .slideshow-container {
-        max-width: 90%;
-        height: 200px; /* Adjust height for tablets */
-    }
+            .slideshow-container {
+                max-width: 90%;
+                height: 200px; /* Adjust height for tablets */
+            }
 
-    .facebook-feed-container {
-        margin-top: 40px; /* Add margin to create space between the slideshow and social media feed */
-    }
+            .facebook-feed-container {
+                margin-top: 40px; /* Add margin to create space between the slideshow and social media feed */
+            }
 
-    .dot {
-        height: 10px;
-        width: 10px;
-    }
-}
+            .dot {
+                height: 10px;
+                width: 10px;
+            }
+        }
 
-@media (max-width: 576px) {
-    .logo-container img {
-        max-height: 1000px;
-        max-width: 100%;
-        height: auto; 
-    }
+        @media (max-width: 576px) {
+            .logo-container img {
+                max-height: 200px; /* Reduce logo height on small screens */
+                max-width: 100%;
+                height: auto; 
+            }
 
- /* Adjust logo sizes on mobile */
- .d-flex a {
-        font-size: 8vw; /* Make icons larger */
-    }
+            /* Adjust logo sizes on mobile */
+            .d-flex a {
+                font-size: 8vw; /* Make icons larger */
+            }
 
-    .fs-2 {
-        font-size: 7vw;
-    }
+            .fs-2 {
+                font-size: 7vw;
+            }
 
-    .d-flex {
-        font-size: 7vw;
-        gap: 4vw;
-    }
+            .d-flex {
+                font-size: 7vw;
+                gap: 4vw;
+            }
 
-    .slideshow-container {
-        max-width: 100%;
-        min-height: 50px; /* Further adjust height for small screens */
-    }
+            .slideshow-container {
+                max-width: 100%;
+                min-height: 50px; /* Further adjust height for small screens */
+            }
 
-    .facebook-feed-container {
-        margin-top: 20px; /* Add margin to create space between the slideshow and social media feed */
-    }
+            .facebook-feed-container {
+                margin-top: 20px; /* Add margin to create space between the slideshow and social media feed */
+            }
 
-    .dot {
-        height: 10px;
-        width: 10px;
-    }
-}
+            .dot {
+                height: 10px;
+                width: 10px;
+            }
+        }
+
+        /* Footer adjustments for mobile */
+        footer {
+            padding: 1rem 0; /* Reduce footer padding */
+            font-size: 0.8rem; /* Smaller text size */
+        }
     </style>
 </head>
 <body class="d-flex flex-column h-100">
