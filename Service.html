@@ -17,64 +17,46 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        /* Adjustments to prevent overlapping */
-        .logo-container, .policy-container {
-            margin-bottom: 50px; /* Add space between sections */
+             /* Ensuring the text scales with the screen size */
+             .fs-3 {
+            font-size: 1.6vw; /* Font size scales with viewport width */
         }
 
-        /* Ensure all images are responsive */
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
+        /* Ensuring icons and gap scale with the screen size */
+        .d-flex {
+            font-size: 1.6vw; /* Font size scales with viewport width */
+            gap: 2.5vw; /* Gap scales with viewport width */
+        }
+
+        /* Responsive font size for smaller screens */
+        @media (max-width: 600px) {
+            .fs-3, .d-flex {
+                font-size: 4vw; /* Increase font size for smaller screens */
+            }
         }
 
         .navbar-nav .nav-link {
             font-size: 20px !important;
         }
 
-        /* Additional styling for layout */
-        .fs-3 {
-            font-size: 1.6vw; /* Font size scales with viewport width */
+        /* Facebook feed container styles */
+        .social-media-feed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 70px 0;
         }
 
-        .d-flex {
-            font-size: 1.6vw; /* Font size scales with viewport width */
-            gap: 2.5vw; /* Gap scales with viewport width */
+        .fb-page {
+            width: 100%; /* Adjust width to be responsive */
+            max-width: 1000px; /* Set a max width */
         }
 
-        /* Increase image size on mobile screens */
-        @media (max-width: 1000px) {
-            .fs-3, .d-flex {
-                font-size: 6vw; /* Increase font size for smaller screens */
-            }
-            .img-fluid {
-                max-width: 100%; /* Ensure image scales with container */
-                height: auto; /* Maintain aspect ratio */
-            }
+        /* Make the images bigger */
+        .img-fluid {
+            max-width: 150%; /* Increased max-width to make images larger */
+            height: auto;
         }
-
-
-        @media (max-width: 600px) {
-        .fs-3, .d-flex {
-            font-size: 4vw; /* Increase font size for smaller screens */
-        }
-    }
-        /* Ensure flyer image is larger on mobile devices */
-        @media (max-width: 768px) {
-            .img-fluid {
-                max-width: 100%; /* Full width of the container */
-                height: auto; /* Adjust height automatically */
-            }
-        }
-        /* Ensure flyer image is larger on mobile devices */
-
-/* Make flyer image larger */
-@media (max-width: 576px) {
-    .img-fluid {
-        max-width: 100%; /* Allow the image to take full width on smaller screens */
-        height: auto; /* Maintain the aspect ratio */
-    }
-}
     </style>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
