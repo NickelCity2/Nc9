@@ -27,29 +27,29 @@
         }
 
         iframe {
-            width: 100%;
-            min-width: 1200px; /* Ensure enough width for calendar */
+            width: 100%; /* Make the iframe take the full width of its container */
+            max-width: 1200px; /* Ensure it doesn't exceed 1200px */
             height: 70vh; /* Adjust height to fit within viewport */
             border: 0;
         }
 
         @media (max-width: 576px) {
             iframe {
-                min-width: 600px; /* Adjust minimum width for smaller screens */
+                max-width: 800px; /* Adjust maximum width for smaller screens */
                 height: 60vh; /* Reduce height on very small screens */
             }
         }
 
         @media (max-width: 768px) {
             iframe {
-                min-width: 800px; /* Adjust minimum width for tablets and larger phones */
+                max-width: 1000px; /* Adjust maximum width for tablets and larger phones */
                 height: 65vh; /* Adjust height for small tablets and larger phones */
             }
         }
 
         @media (max-width: 992px) {
             iframe {
-                min-width: 1000px; /* Adjust minimum width for small desktops */
+                max-width: 1200px; /* Adjust maximum width for small desktops */
                 height: 70vh; /* Adjust height for small desktops */
             }
         }
@@ -78,7 +78,7 @@
 
         <div class="calendar-container">
             <!-- Your calendar code goes here -->
-            <iframe src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/6fef7ec7-b770-460f-a6b1-526bfa479ab9/cid-6A7218F4FA81DCA7/index.html?view=week" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/6fef7ec7-b770-460f-a6b1-526bfa479ab9/cid-6A7218F4FA81DCA7/index.html?view=week" frameborder="0" scrolling="yes"></iframe>
         </div>
     </main>
 
@@ -97,3 +97,4 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
+
