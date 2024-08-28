@@ -20,42 +20,25 @@
         .calendar-container {
             display: flex;
             width: 100%;
-            max-width: 1200px;
+            max-width: 100%;
             margin: auto;
             margin-top: 50px; /* Adjust margin-top as needed */
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 0 10px; /* Add padding to prevent overflow on small screens */
         }
 
         iframe {
             width: 100%;
-            height: 70vh;
-            max-width: 1200px;
+            height: 80vh; /* Adjust height to fit within viewport */
+            max-width: 100%;
             border: 0;
         }
 
-        @media (min-width: 576px) {
+        @media (max-width: 576px) {
             iframe {
-                height: 80vh;
-            }
-        }
-
-        @media (min-width: 768px) {
-            iframe {
-                height: 85vh;
-            }
-        }
-
-        @media (min-width: 992px) {
-            iframe {
-                height: 90vh;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            iframe {
-                height: 95vh;
+                height: 60vh; /* Reduce height on very small screens */
             }
         }
     </style>
@@ -83,7 +66,7 @@
 
         <div class="calendar-container">
             <!-- Your calendar code goes here -->
-            <iframe src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/6fef7ec7-b770-460f-a6b1-526bfa479ab9/cid-6A7218F4FA81DCA7/index.html" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/6fef7ec7-b770-460f-a6b1-526bfa479ab9/cid-6A7218F4FA81DCA7/index.html?view=week" frameborder="0" scrolling="no"></iframe>
         </div>
     </main>
 
