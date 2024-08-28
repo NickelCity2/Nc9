@@ -20,21 +20,17 @@
         .calendar-container {
             display: flex;
             width: 100%;
-            max-width: 100%;
-            margin: auto;
+            overflow-x: auto; /* Enable horizontal scrolling */
             margin-top: 50px; /* Adjust margin-top as needed */
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 0 10px; /* Add padding to prevent overflow on small screens */
+            padding: 0 10px; /* Add padding to prevent content from touching edges */
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
         }
 
         iframe {
             width: 100%;
-            max-width: 1000px; /* Set a max-width to prevent overflow */
+            max-width: 1200px; /* Set a max-width to prevent too large on big screens */
             height: 70vh; /* Adjust height to fit within viewport */
             border: 0;
-            overflow: hidden; /* Hide overflow to prevent scroll bars */
         }
 
         @media (max-width: 576px) {
