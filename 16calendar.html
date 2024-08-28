@@ -27,22 +27,30 @@
         }
 
         iframe {
-            flex-shrink: 0; /* Prevent iframe from shrinking */
-            width: 100%; /* Full width of the parent container */
-            max-width: 1200px; /* Maximum width of the iframe */
+            width: 100%;
+            min-width: 1200px; /* Ensure enough width for calendar */
             height: 70vh; /* Adjust height to fit within viewport */
             border: 0;
         }
 
         @media (max-width: 576px) {
             iframe {
+                min-width: 600px; /* Adjust minimum width for smaller screens */
                 height: 60vh; /* Reduce height on very small screens */
             }
         }
 
         @media (max-width: 768px) {
             iframe {
+                min-width: 800px; /* Adjust minimum width for tablets and larger phones */
                 height: 65vh; /* Adjust height for small tablets and larger phones */
+            }
+        }
+
+        @media (max-width: 992px) {
+            iframe {
+                min-width: 1000px; /* Adjust minimum width for small desktops */
+                height: 70vh; /* Adjust height for small desktops */
             }
         }
     </style>
