@@ -17,29 +17,31 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        .calendar-wrapper {
-            display: flex;
+        .calendar-container {
             overflow-x: auto; /* Enable horizontal scrolling */
-            padding: 0 10px; /* Add padding to prevent content from touching edges */
-            box-sizing: border-box; /* Ensure padding is included in width calculation */
+            padding: 10px; /* Padding for better look */
+            box-sizing: border-box; /* Include padding in width calculation */
+            width: 100%; /* Full width of the parent container */
+            display: flex;
+            justify-content: center; /* Center iframe horizontally */
         }
 
-        .calendar-wrapper iframe {
-            flex: 0 0 auto; /* Prevent iframe from shrinking */
+        iframe {
+            flex-shrink: 0; /* Prevent iframe from shrinking */
             width: 100%; /* Full width of the parent container */
-            max-width: 1200px; /* Set a max-width to prevent too large on big screens */
+            max-width: 1200px; /* Maximum width of the iframe */
             height: 70vh; /* Adjust height to fit within viewport */
             border: 0;
         }
 
         @media (max-width: 576px) {
-            .calendar-wrapper iframe {
+            iframe {
                 height: 60vh; /* Reduce height on very small screens */
             }
         }
 
         @media (max-width: 768px) {
-            .calendar-wrapper iframe {
+            iframe {
                 height: 65vh; /* Adjust height for small tablets and larger phones */
             }
         }
@@ -66,7 +68,7 @@
             </div>
         </nav>
 
-        <div class="calendar-wrapper">
+        <div class="calendar-container">
             <!-- Your calendar code goes here -->
             <iframe src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/6fef7ec7-b770-460f-a6b1-526bfa479ab9/cid-6A7218F4FA81DCA7/index.html?view=week" frameborder="0" scrolling="no"></iframe>
         </div>
