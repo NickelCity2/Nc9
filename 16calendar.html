@@ -17,30 +17,29 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        .calendar-container {
+        .calendar-wrapper {
             display: flex;
-            width: 100%;
             overflow-x: auto; /* Enable horizontal scrolling */
-            margin-top: 50px; /* Adjust margin-top as needed */
             padding: 0 10px; /* Add padding to prevent content from touching edges */
             box-sizing: border-box; /* Ensure padding is included in width calculation */
         }
 
-        iframe {
-            width: 100%;
+        .calendar-wrapper iframe {
+            flex: 0 0 auto; /* Prevent iframe from shrinking */
+            width: 100%; /* Full width of the parent container */
             max-width: 1200px; /* Set a max-width to prevent too large on big screens */
             height: 70vh; /* Adjust height to fit within viewport */
             border: 0;
         }
 
         @media (max-width: 576px) {
-            iframe {
+            .calendar-wrapper iframe {
                 height: 60vh; /* Reduce height on very small screens */
             }
         }
 
         @media (max-width: 768px) {
-            iframe {
+            .calendar-wrapper iframe {
                 height: 65vh; /* Adjust height for small tablets and larger phones */
             }
         }
@@ -67,7 +66,7 @@
             </div>
         </nav>
 
-        <div class="calendar-container">
+        <div class="calendar-wrapper">
             <!-- Your calendar code goes here -->
             <iframe src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/6fef7ec7-b770-460f-a6b1-526bfa479ab9/cid-6A7218F4FA81DCA7/index.html?view=week" frameborder="0" scrolling="no"></iframe>
         </div>
