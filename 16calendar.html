@@ -31,14 +31,21 @@
 
         iframe {
             width: 100%;
-            height: 80vh; /* Adjust height to fit within viewport */
-            max-width: 100%;
+            max-width: 1000px; /* Set a max-width to prevent overflow */
+            height: 70vh; /* Adjust height to fit within viewport */
             border: 0;
+            overflow: hidden; /* Hide overflow to prevent scroll bars */
         }
 
         @media (max-width: 576px) {
             iframe {
                 height: 60vh; /* Reduce height on very small screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            iframe {
+                height: 65vh; /* Adjust height for small tablets and larger phones */
             }
         }
     </style>
