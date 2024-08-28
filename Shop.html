@@ -10,10 +10,10 @@
         <link rel="icon" type="image/x-icon" href="assets/logo.png" />
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
        
-<!-- Bootstrap icons-->
+        <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
@@ -21,393 +21,168 @@
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- CSS for responsiveness -->
-<style>
-    /* Ensuring the text scales with the screen size */
-    .fs-3 {
-        font-size: 1.6vw; /* Font size scales with viewport width */
-    }
+            <style>
+                /* Ensuring the text scales with the screen size */
+                .fs-3 {
+                    font-size: 1.6vw; /* Font size scales with viewport width */
+                }
 
-    /* Ensuring icons and gap scale with the screen size */
-    .d-flex {
-        font-size: 1.6vw; /* Font size scales with viewport width */
-        gap: 2.5vw; /* Gap scales with viewport width */
-    }
+                /* Ensuring icons and gap scale with the screen size */
+                .d-flex {
+                    font-size: 1.6vw; /* Font size scales with viewport width */
+                    gap: 2.5vw; /* Gap scales with viewport width */
+                }
 
-    /* Responsive font size for smaller screens */
-    @media (max-width: 600px) {
-        .fs-3, .d-flex {
-            font-size: 4vw; /* Increase font size for smaller screens */
-        }
-    }
+                /* Responsive font size for smaller screens */
+                @media (max-width: 600px) {
+                    .fs-3, .d-flex {
+                        font-size: 4vw; /* Increase font size for smaller screens */
+                    }
+                }
 
-    .navbar-nav .nav-link {
-        font-size: 20px !important;
-    } 
+                /* Center the button at the bottom of the screen */
+header {
+    position: fixed;
+    bottom: 20px;
+    left: 85%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure it stays above other elements */
+}
 
-</style>
+.openbtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #C99700;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px #000000;
+    transition: all 0.3s ease;
+}
 
-             <!-- Navigation-->
-             <nav class="navbar navbar-expand-lg navbar-light py-3">
+.openbtn:hover {
+    box-shadow: 0px 2px 0px #C99700;
+    transform: translateY(3px);
+}
+
+                .navbar-nav .nav-link {
+                    font-size: 20px !important;
+                } 
+
+            </style>
+
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light py-3">
                 <div class="container px-5">
                     <a class="navbar-brand" href="index.html"><span class="fw-bolder text-warning">Nickel City Nine Baseball LLC.</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                                <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link text-warning" href="Shop.html">Shop</a></li>
-                                <li class="nav-item"><a class="nav-link text-warning" href="upcoming events.html">Upcoming Events</a></li>
-                                <li class="nav-item"><a class="nav-link text-warning" href="fallleague.html">2024 Fall League Info</a></li>
-                                <li class="nav-item"><a class="nav-link text-warning" href="Service.html">Services, Pricing, & Policies</a></li>
-                                <li class="nav-item"><a class="nav-link text-warning" href="contact.html">Contact Us</a></li>
-                                <li class="nav-item"><a class="nav-link text-warning" href="staff.html">About Us</a></li>
-                        </ul>
-                    </div>
-                </div>
+                            <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-warning" href="Shop.html">Shop</a></li>
+                            <li class="nav-item"><a class="nav-link text-warning" href="upcoming events.html">Upcoming Events</a></li> 
+                            <li class="nav-item"><a class="nav-link text-warning" href="fallleague.html">2024 Fall League Info</a></li> 
+                            <li class="nav-item"><a class="nav-link text-warning" href="Service.html">Services, Pricing, & Policies</a></li> 
+                            <li class="nav-item"><a class="nav-link text-warning" href="contact.html">Contact Us</a></li> 
+                            <li class="nav-item"><a class="nav-link text-warning" href="staff.html">About Us</a></li> 
+                        </ul> 
+                    </div> 
+                </div> 
             </nav>
 
-        <title>Centered Logo</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-<style>
-    .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 20vh; /* Full height of the viewport */
-    }
-
-    h1 {
-    font-family: "Oswald", sans-serif;     
-        }
-</style>
-</head>
-<body>
-
-<div class="container">
-<div class="row justify-content-center logo-container">
-    <div class="col-12 text-center">
-        <img src="assets/Logos/logo.png" alt="Logo" class="img-fluid" style="max-width: 150px; height: auto;">
-    </div>
-</div>
-</div>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-
-<!-- CSS for responsiveness -->
-<style>
-    /* Ensuring the text scales with the screen size */
-    .fs-3 {
-        font-size: 1.6vw; /* Font size scales with viewport width */
-    }
-
-    /* Ensuring icons and gap scale with the screen size */
-    .d-flex {
-        font-size: 1.6vw; /* Font size scales with viewport width */
-        gap: 2.5vw; /* Gap scales with viewport width */
-    }
-
-    /* Responsive font size for smaller screens */
-    @media (max-width: 600px) {
-        .fs-3, .d-flex {
-            font-size: 4vw; /* Increase font size for smaller screens */
-        }
-    }
-</style>
-            <!-- Page Content-->
-            <div class="container px-5 my-5">
-                <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0">
-                        <span class="text-white d-inline">Shop NC9 Merch</span>
-                    </h1>                    
+        <!-- Centered Logo -->
+        <div class="container">
+            <div class="row justify-content-center logo-container">
+                <div class="col-12 text-center">
+                    <img src="assets/Logos/logo.png" alt="Logo" class="img-fluid" style="max-width: 150px; height: auto;">
                 </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
-                        </section>
-                        <!-- Divider-->
-                        <div class="pb-5"></div>
-                        <title>Simple Shop</title>
-                        <link rel="stylesheet" href="css/styles.css">
-                        <style>
-                            body {
-                                margin: 0;
-                                font-family: Oswald, sans-serif;
-                                background-color: #f0f0f0;
-                                display: flex;
-                                flex-direction: column;
-                                min-height: 100vh;
-                            }
-                    
-                            header, footer {
-                                text-align: center;
-                                padding: 10px 0;
-                            }
-                    
-                            main {
-                                flex: 1;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                flex-direction: column;
-                                padding: 20px;
-                            }
-                    
-                            .products-container {
-                                display: flex;
-                                gap: 20px; /* Space between product containers */
-                                flex-wrap: wrap;
-                                justify-content: center; /* Center the products horizontally */
-                            }
-                    
-                            .product {
-                                border: 1px solid #ccc;
-                                padding: 20px;
-                                border-radius: 10px;
-                                width: 300px; /* Increased width */
-                                height: 400px; /* Set a fixed height */
-                                box-sizing: border-box;
-                                text-align: center;
-                                background-color: white; /* White background */
-                                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 3D effect */
-                                transition: transform 0.2s; /* Smooth transition */
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-between;
-                            }
-                    
-                            .product:hover {
-                                transform: translateY(-10px); /* Lift on hover */
-                            }
-                    
-                            .product img {
-                                max-width: 100%;
-                                height: auto;
-                                border-radius: 5px;
-                                margin-bottom: 15px;
-                            }
-                    
-                            .product button {
-                                margin-top: 10px;
-                                padding: 10px 20px;
-                                border: none;
-                                border-radius: 5px;
-                                background-color: #73b2dd;
-                                color: white;
-                                cursor: pointer;
-                                box-shadow: 0px 5px 0px #000000;
-                                transition: all 0.3s ease;
-                            }
-                    
-                            .product button:hover {
-                                box-shadow: 0px 2px 0px #74a2ca;
-                                transform: translateY(3px);
-                            }
-                    
-                            /* Sidebar styles */
-                            .sidebar {
-                                height: 100%;
-                                width: 0;
-                                position: fixed;
-                                z-index: 1;
-                                top: 0;
-                                right: 0;
-                                background-color: white; /* White background */
-                                overflow-x: hidden;
-                                transition: 0.5s;
-                                padding-top: 60px;
-                                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center; /* Center the content horizontally */
-                                text-align: center; /* Center the text */
-                            }
-                    
-                            .sidebar a {
-                                padding: 10px 15px;
-                                text-decoration: none;
-                                font-size: 18px;
-                                color: black; /* Black text color */
-                                display: block;
-                                transition: 0.3s;
-                            }
-                    
-                            .sidebar a:hover {
-                                background-color: #ddd;
-                            }
-                    
-                            .sidebar .closebtn {
-                                position: absolute;
-                                top: 0;
-                                right: 25px;
-                                font-size: 36px;
-                            }
-                    
-                            .openbtn {
-                                font-size: 20px;
-                                cursor: pointer;
-                                background-color: white; /* White background */
-                                color: black; /* Black text color */
-                                border: none;
-                                padding: 10px 15px;
-                                border-radius: 5px;
-                                margin: 10px;
-                                box-shadow: 0px 5px 0px #000000; /* 3D effect */
-                                transition: all 0.3s ease;
-                            }
-                    
-                            .openbtn:hover {
-                                background-color: #f0f0f0;
-                                box-shadow: 0px 2px 0px #000000;
-                                transform: translateY(3px);
-                            }
-                    
-                            .cart-item {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                padding: 10px 0;
-                                width: 80%; /* Ensure cart items are centered and not full width */
-                            }
-                    
-                            .cart-item button {
-                                background-color: #dc3545;
-                                color: white;
-                                border: none;
-                                padding: 5px 10px;
-                                border-radius: 5px;
-                                cursor: pointer;
-                                transition: background-color 0.3s ease;
-                            }
-                    
-                            .cart-item button:hover {
-                                background-color: #c82333;
-                            }
-                        </style>
-                    </head>
-                    <body>
-                        <main>
-                            <!-- Products Section -->
-                            <div class="products">
-                                <div class="products-container">
-                                    <div class="product">
-                                        <img src="assets/Merch/NC9_blue_hat.jpg" alt="Product 1 Image">
-                                        <span>Baseball Cap</span>
-                                        <button onclick="addToCart('Baseball Cap 1', 25.00)">Add to Cart</button>
-                                    </div>
-                                    <div class="product">
-                                        <img src="assets/Merch/9 Blue_hat.jpg" alt="Product 2 Image">
-                                        <span>Baseball Cap</span>
-                                        <button onclick="addToCart('Baseball Cap 2', 25.00)">Add to Cart</button>
-                                    </div>
-                                    <div class="product">
-                                        <img src="assets/Merch/Baseball_sticker.jpg" alt="Product 3 Image">
-                                        <span>Sticker</span>
-                                        <button onclick="addToCart('Sticker1', 5.00)">Add to Cart</button>
-                                    </div>
-                                    <div class="product">
-                                        <img src="assets/Merch/Blue_buff.jpg" alt="Product 3 Image">
-                                        <span>Sticker</span>
-                                        <button onclick="addToCart('Sticker2', 5.00)">Add to Cart</button>
-                                    </div>
-                                    <div class="product">
-                                        <img src="assets/Merch/Yellow_buff_9.jpg" alt="Product 3 Image">
-                                        <span>Sticker</span>
-                                        <button onclick="addToCart('Sticker3', 5.00)">Add to Cart</button>
-                                    </div>
-                                    <div class="product">
-                                        <img src="assets/Merch/Yellow_buff_circle.jpg" alt="Product 3 Image">
-                                        <span>Sticker</span>
-                                        <button onclick="addToCart('Sticker4', 5.00)">Add to Cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </main>
-                    
-                          <!-- Sidebar -->
-        <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="cart">
-                <h2>Cart</h2>
-                <div id="cart-items"></div>
-                <div>
-                    <strong>Total: $<span id="cart-total">0.00</span></strong>
-                </div>
-                <button id="checkout-button">Request</button>
             </div>
         </div>
 
-        <header>
-            <button class="openbtn" onclick="openNav()">Cart</button>
-        </header>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-        <script>
-            const cart = [];
-            let total = 0;
-
-            function openNav() {
-                document.getElementById("mySidebar").style.width = "300px";
-            }
-
-            function closeNav() {
-                document.getElementById("mySidebar").style.width = "0";
-            }
-
-            function addToCart(name, price) {
-                cart.push({ name, price });
-                total += price;
-                renderCart();
-                openNav(); // Open the cart when an item is added
-            }
-
-            function removeFromCart(index) {
-                total -= cart[index].price;
-                cart.splice(index, 1);
-                renderCart();
-            }
-
-            function renderCart() {
-                const cartItems = document.getElementById('cart-items');
-                cartItems.innerHTML = '';
-                cart.forEach((item, index) => {
-                    const div = document.createElement('div');
-                    div.className = 'cart-item';
-                    div.innerHTML = `
-                        <span>${item.name} - $${item.price.toFixed(2)}</span>
-                        <button onclick="removeFromCart(${index})">Remove</button>
-                    `;
-                    cartItems.appendChild(div);
-                });
-                document.getElementById('cart-total').innerText = total.toFixed(2);
-            }
-
-            document.getElementById('checkout-button').addEventListener('click', () => {
-                const email = "joebarberio@nc9baseball.com";
-                let emailBody = "Order details:\n\n";
-
-                cart.forEach(item => {
-                    emailBody += `${item.name}: $${item.price.toFixed(2)}\n`;
-                });
-
-                emailBody += `\nTotal: $${total.toFixed(2)}`;
-
-                const mailtoLink = `mailto:${email}?subject=Order Request&body=${encodeURIComponent(emailBody)}`;
-                window.location.href = mailtoLink;
-            });
-        </script>
-
-        <!-- Footer-->
-        <footer class="py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">**All items requested will be fulfilled by staff at NC9- Payment and pickup done in person**</div></div>
-                    <div class="col-auto">
+        <!-- Page Content -->
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0">
+                    <span class="text-white d-inline">Shop NC9 Merch</span>
+                </h1>                    
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="container px-5">
+                        <div class="row align-items-center text-center justify-content-center">
+                            <div class="col-auto">
+                                <div class="small m-0 text-white">
+                                    **All items requested will be fulfilled by staff at NC9 - Payment and pickup done in person**
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+                    <!-- Divider-->
+                    <div class="pb-5"></div>
 
-        <!-- Footer-->
+                    <!-- Product Section -->
+                    <main>
+                        <div class="products">
+                            <div class="products-container">
+                                <div class="product">
+                                    <img src="assets/Merch/NC9_blue_hat.jpg" alt="Baseball Cap">
+                                    <span>Baseball Cap</span>
+                                    <button onclick="addToCart('Baseball Cap 1', 25.00)">Add to Cart</button>
+                                </div>
+                                <div class="product">
+                                    <img src="assets/Merch/9 Blue_hat.jpg" alt="Baseball Cap">
+                                    <span>Baseball Cap</span>
+                                    <button onclick="addToCart('Baseball Cap 2', 25.00)">Add to Cart</button>
+                                </div>
+                                <div class="product">
+                                    <img src="assets/Merch/Baseball_sticker.jpg" alt="Sticker">
+                                    <span>Sticker</span>
+                                    <button onclick="addToCart('Sticker 1', 5.00)">Add to Cart</button>
+                                </div>
+                                <div class="product">
+                                    <img src="assets/Merch/Blue_buff.jpg" alt="Sticker">
+                                    <span>Sticker</span>
+                                    <button onclick="addToCart('Sticker 2', 5.00)">Add to Cart</button>
+                                </div>
+                                <div class="product">
+                                    <img src="assets/Merch/Yellow_buff_9.jpg" alt="Sticker">
+                                    <span>Sticker</span>
+                                    <button onclick="addToCart('Sticker 3', 5.00)">Add to Cart</button>
+                                </div>
+                                <div class="product">
+                                    <img src="assets/Merch/Yellow_buff_circle.jpg" alt="Sticker">
+                                    <span>Sticker</span>
+                                    <button onclick="addToCart('Sticker 4', 5.00)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <!-- Sidebar -->
+                    <div id="mySidebar" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="cart">
+                            <h2>Cart</h2>
+                            <div id="cart-items"></div>
+                            <div>
+                                <strong>Total: $<span id="cart-total">0.00</span></strong>
+                            </div>
+                            <button id="checkout-button">Request</button>
+                        </div>
+                    </div>
+
+                    <header>
+                        <button class="openbtn" onclick="openNav()">Cart</button>
+                    </header>
+                </div>
+            </div>
+        </div>
+
+
         <footer class="py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
@@ -417,9 +192,146 @@
                 </div>
             </div>
         </footer>
-        <!-- Bootstrap core JS-->
+
+        <!-- Bootstrap core JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+        <!-- Core theme JS -->
         <script src="js/scripts.js"></script>
-    </body>
+    </main>
+
+    <!-- Updated Styles for Larger Containers -->
+    <style>
+        /* Product Styles */
+        .products-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            width: 320px; /* Increased width */
+            height: auto; /* Adjusted height for better fit */
+            box-sizing: border-box;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .product span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #73b2dd;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0px 5px 0px #000000;
+            transition: all 0.3s ease;
+        }
+
+        .product button:hover {
+            box-shadow: 0px 2px 0px #74a2ca;
+            transform: translateY(3px);
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: white;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            width: 90%; /* Ensure cart items fit well */
+        }
+
+        .cart-item span {
+            word-wrap: break-word;
+            max-width: 70%; /* Prevent text overflow */
+        }
+    </style>
+
+    <!-- JavaScript for Cart Functionality -->
+    <script>
+        const cart = [];
+        let total = 0;
+
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "300px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            total += price;
+            renderCart();
+            openNav(); // Open the cart when an item is added
+        }
+
+        function removeFromCart(index) {
+            total -= cart[index].price;
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <span>${item.name} - $${item.price.toFixed(2)}</span>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
+                cartItems.appendChild(div);
+            });
+            document.getElementById('cart-total').textContent = total.toFixed(2);
+        }
+
+        document.getElementById('checkout-button').addEventListener('click', function () {
+            alert('Request sent. Total: $' + total.toFixed(2));
+        });
+    </script>
+</body>
 </html>
