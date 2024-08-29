@@ -35,6 +35,28 @@
             }
         }
 
+        @media (max-width: 767px) {
+    .pricing-container {
+        padding: 0 15px; /* Reduce padding for smaller screens */
+    }
+    
+    .pricing-container .col-lg-12,
+    .pricing-container .col-xl-11,
+    .pricing-container .col-xxl-10 {
+        max-width: 100%; /* Use full width on smaller screens */
+    }
+
+    .pricing-container .img-fluid {
+        width: 100%;
+        height: auto;
+        max-width: none; /* Ensure the image takes up full width */
+    }
+
+    /* Increase the size of the text in the header */
+    .pricing-container h1.display-5 {
+        font-size: 2rem; /* Larger font for mobile */
+    }
+}
         .pricing-container {
     max-width: 1200px; /* Increase max-width for larger displays */
     padding: 0 30px; /* Increase padding for better spacing */
@@ -61,14 +83,6 @@
 }
         .navbar-nav .nav-link {
             font-size: 20px !important;
-        }
-
-        /* Facebook feed container styles */
-        .social-media-feed {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 70px 0;
         }
 
         /* Make the images bigger */
