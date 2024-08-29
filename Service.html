@@ -46,11 +46,18 @@
 }
 
 /* Make the image larger on small screens */
-@media (max-width: 650px) {
-     .img-fluid {
-        
-        display: block; /* Treat the image as a block element */
-        text-align:center;
+@media (max-width: 600px) {
+    .img-fluid {
+        width: 150%; /* Increase the size of the image */
+        max-width: none;
+    }
+}
+
+/* Responsive adjustments for text */
+
+@media (max-width: 600px) {
+    .fs-3, .d-flex {
+        font-size: 4vw;
     }
 }
 
@@ -58,14 +65,12 @@
     max-width: 1200px;
     padding: 0 30px;
     margin: 0 auto;
-    text-align: center; /* Center align text and inline elements */
 }
-
 
 .pricing-container .col-lg-12,
 .pricing-container .col-xl-11,
 .pricing-container .col-xxl-10 {
-    max-width: 150%;
+    max-width: 100%;
 }
 
 @media (max-width: 767px) {
