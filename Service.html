@@ -47,17 +47,17 @@
 
 /* Make the image larger on small screens */
 @media (max-width: 650px) {
-    .img-fluid {
-        width: 180%; /* Increase the size of the image */
-        max-width: none;
+    .pricing-container {
+        padding: 0 15px; /* Adjust padding for smaller screens */
     }
-}
 
-/* Responsive adjustments for text */
-
-@media (max-width: 650px) {
-    .fs-3, .d-flex {
-        font-size: 4vw;
+    .img-fluid {
+        width: 100%; /* Ensure the image takes full width on small screens */
+        max-width: 100%; /* Remove any max-width constraints */
+        height: auto; /* Maintain the aspect ratio */
+        display: block; /* Treat the image as a block element */
+        margin-left: auto; /* Center the image horizontally */
+        margin-right: auto; /* Center the image horizontally */
     }
 }
 
