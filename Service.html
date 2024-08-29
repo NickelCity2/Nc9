@@ -32,56 +32,48 @@
             font-size: 20px !important;
         }
 
-        /* Make the images bigger */
+        /* Make the images responsive */
         .img-fluid {
-            max-width: 150%; /* Increased max-width to make images larger */
-            height: auto;
+            width: 100%; /* Set width to 100% of the parent container */
+            height: auto; /* Maintain the aspect ratio */
+            max-width: none; /* Remove any max-width limits */
         }
 
-        /* Ensure the image is responsive */
-.img-fluid {
-    width: 100%; /* Set width to 100% of the parent container */
-    height: auto; /* Maintain the aspect ratio */
-    max-width: none; /* Remove any max-width limits */
-}
+        /* Center image in the container */
+        .logo-container img,
+        .pricing-container img {
+            margin: 0 auto; /* Center the image horizontally */
+            display: block; /* Make the image a block element */
+        }
 
-/* Make the image larger on small screens */
-@media (max-width: 600px) {
-    .img-fluid {
-        width: 150%; /* Increase the size of the image */
-        max-width: none;
-    }
-}
+        /* Responsive adjustments for text */
+        @media (max-width: 600px) {
+            .fs-3, .d-flex {
+                font-size: 4vw;
+            }
+        }
 
-/* Responsive adjustments for text */
+        .pricing-container {
+            max-width: 1200px;
+            padding: 0 30px;
+            margin: 0 auto;
+        }
 
-@media (max-width: 600px) {
-    .fs-3, .d-flex {
-        font-size: 4vw;
-    }
-}
+        .pricing-container .col-lg-12,
+        .pricing-container .col-xl-11,
+        .pricing-container .col-xxl-10 {
+            max-width: 100%;
+        }
 
-.pricing-container {
-    max-width: 1200px;
-    padding: 0 30px;
-    margin: 0 auto;
-}
+        @media (max-width: 767px) {
+            .pricing-container {
+                padding: 0 15px;
+            }
+        }
 
-.pricing-container .col-lg-12,
-.pricing-container .col-xl-11,
-.pricing-container .col-xxl-10 {
-    max-width: 100%;
-}
-
-@media (max-width: 767px) {
-    .pricing-container {
-        padding: 0 15px;
-    }
-}
-
-.navbar-nav .nav-link {
-    font-size: 20px !important;
-}
+        .navbar-nav .nav-link {
+            font-size: 20px !important;
+        }
     </style>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
