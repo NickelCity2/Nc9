@@ -27,7 +27,34 @@
             font-size: 1.6vw; /* Font size scales with viewport width */
             gap: 2.5vw; /* Gap scales with viewport width */
         }
+/* Make the images responsive and larger */
+.img-fluid {
+    max-width: 100%; /* Ensure images do not exceed container width */
+    height: auto; /* Maintain the aspect ratio */
+}
 
+/* Center image in the container */
+.logo-container img,
+.pricing-container img {
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Make the image a block element */
+}
+
+/* Make the image larger on small screens */
+@media (max-width: 600px) {
+    .logo-container img,
+    .pricing-container img {
+        width: 80%; /* Adjust this value as needed to increase size */
+    }
+}
+
+/* Ensure images are not too large on larger screens */
+@media (min-width: 768px) {
+    .logo-container img,
+    .pricing-container img {
+        max-width: 150px; /* Maximum width for larger screens */
+    }
+}
         .navbar-nav .nav-link {
             font-size: 20px !important;
         }
