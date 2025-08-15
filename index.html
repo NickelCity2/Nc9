@@ -34,12 +34,37 @@
         .navbar-nav .nav-link {
             font-size: 20px !important;
         }
- /* Nav boxes */
- .nav-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+        .nav-box {
+    display: block;
+    background-color: #ffda77; /* Bright background so it’s visible */
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    text-decoration: none;
+    color: #222;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.nav-box:hover {
+    transform: translateY(-5px);
+    background-color: #ffc107;
+}
+.nav-box-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.nav-box-desc {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+/* Make boxes responsive on smaller screens */
+@media (max-width: 768px) {
+    .nav-box {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
         .facebook-feed {
             width: 100%;
@@ -369,8 +394,8 @@
 
 
 <!-- Navigation Boxes Below Slideshow -->
-<div class="container mt-4">
-    <div class="row justify-content-center nav-boxes">
+<div class="container mt-4 mb-5">
+    <div class="row justify-content-center">
         <div class="col-md-4 mb-3">
             <a href="calendar.html" class="nav-box">
                 <div class="nav-box-title">Calendar</div>
@@ -391,6 +416,7 @@
         </div>
     </div>
 </div>
+
     <!-- Footer -->
     <footer class="py-4 mt-auto">
         <div class="container px-5">
