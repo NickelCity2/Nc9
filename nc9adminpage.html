@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nickel City Nine - Admin Image Manager</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 20px;}
+.container { max-width: 1000px; margin: auto;}
+h1 { text-align: center; margin-bottom: 30px;}
+.section { margin-bottom: 40px; }
+.section h2 { margin-bottom: 20px; color: #333; }
+.image-item { display: flex; align-items: center; margin-bottom: 20px; background: #fff; padding: 15px; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.1);}
+.image-item img { max-width: 200px; max-height: 120px; margin-right: 20px; border-radius: 8px; object-fit: cover; border: 1px solid #ccc;}
+.image-item input[type="file"] { margin-right: 15px; }
+button { padding: 8px 14px; border: none; background: #ffb400; color: #fff; border-radius: 6px; cursor: pointer; }
+button:hover { background: #ffa500; }
+.note { font-size: 0.9rem; color: #555; margin-top: 5px; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Admin Image Manager</h1>
+
+    <!-- Logo Section -->
+    <div class="section">
+        <h2>Logo</h2>
+        <div class="image-item">
+            <img id="logo-img" src="assets/Logos/nc99-removebg-preview.png" alt="Logo">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'logo-img')">
+            <button onclick="replaceImage('logo-img')">Replace</button>
+        </div>
+        <div class="note">Upload a new logo image to replace the current one. For permanent changes, upload to your server.</div>
+    </div>
+
+    <!-- Slideshow Section -->
+    <div class="section">
+        <h2>Slideshow Images</h2>
+
+        <div class="image-item">
+            <img id="slide1" src="assets/Team Photos/NC9 - Bulletproof team photo.jpg" alt="Slide 1">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'slide1')">
+            <button onclick="replaceImage('slide1')">Replace</button>
+        </div>
+        <div class="image-item">
+            <img id="slide2" src="assets/Team Photos/NC9 Grey Fall team photo.jpg" alt="Slide 2">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'slide2')">
+            <button onclick="replaceImage('slide2')">Replace</button>
+        </div>
+        <div class="image-item">
+            <img id="slide3" src="assets/Team Photos/NC9 white-navy fall team photo.jpg" alt="Slide 3">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'slide3')">
+            <button onclick="replaceImage('slide3')">Replace</button>
+        </div>
+        <div class="image-item">
+            <img id="slide4" src="assets/Team Photos/Jim & RL Fall.jpg" alt="Slide 4">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'slide4')">
+            <button onclick="replaceImage('slide4')">Replace</button>
+        </div>
+        <div class="image-item">
+            <img id="slide5" src="assets/Team Photos/nc9tourney.jpg" alt="Slide 5">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'slide5')">
+            <button onclick="replaceImage('slide5')">Replace</button>
+        </div>
+        <div class="image-item">
+            <img id="slide6" src="assets/Team Photos/Coaches Picture.JPG" alt="Slide 6">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'slide6')">
+            <button onclick="replaceImage('slide6')">Replace</button>
+        </div>
+
+        <div class="note">Preview updates instantly. To make permanent, upload the chosen images to your server in the same folder.</div>
+    </div>
+
+    <!-- Nav Boxes Section -->
+    <div class="section">
+        <h2>Navigation Box Images</h2>
+        <div class="image-item">
+            <img id="nav1" src="assets/NavBoxes/calendar.jpg" alt="Calendar">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'nav1')">
+            <button onclick="replaceImage('nav1')">Replace</button>
+        </div>
+        <div class="image-item">
+            <img id="nav2" src="assets/NavBoxes/shop.jpg" alt="Shop">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'nav2')">
+            <button onclick="replaceImage('nav2')">Replace</button>
+        </div>
+        <div class="image-item">
+            <img id="nav3" src="assets/NavBoxes/signup.jpg" alt="Sign Up">
+            <input type="file" accept="image/*" onchange="previewImage(event, 'nav3')">
+            <button onclick="replaceImage('nav3')">Replace</button>
+        </div>
+        <div class="note">Replace the nav box images. Make sure the filenames match your HTML references if uploading permanently.</div>
+    </div>
+</div>
+
+<script>
+function previewImage(event, imgId) {
+    const reader = new FileReader();
+    reader.onload = function() {
+        document.getElementById(imgId).src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+function replaceImage(imgId) {
+    alert('Image replaced on page preview! For permanent replacement, upload the file to your server folder.');
+}
+</script>
+</body>
+</html>

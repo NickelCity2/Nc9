@@ -34,30 +34,48 @@
         .navbar-nav .nav-link {
             font-size: 20px !important;
         }
-        .nav-box {
-    display: block;
-    background-color: #ffda77; /* Bright background so it’s visible */
-    border-radius: 20px;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    text-decoration: none;
-    color: #222;
-    transition: transform 0.3s ease, background 0.3s ease;
+        .navbar {
+    background-color: #080f1189; /* Blue background */
 }
+
+.navbar-nav .nav-link:hover {
+        color: #ffc107; /* change to yellow on hover */
+    }
+    
+/* Nav Boxes Styling */
+.nav-box {
+    background: #ffffff; /* White background */
+    border-radius: 15px;
+    border: 1px solid #173158; /* Optional: subtle border */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
 .nav-box:hover {
     transform: translateY(-5px);
-    background-color: #ffc107;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-.nav-box-title {
-    font-size: 1.7rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+
+.nav-box .text h5 {
+    font-size: 1.25rem;
 }
-.nav-box-desc {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.5;
+
+.nav-box .text p {
+    font-size: 0.95rem;
+}
+
+.nav-box .btn {
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-box .icon {
+        margin-bottom: 10px;
+    }
 }
 /* Make boxes responsive on smaller screens */
 @media (max-width: 768px) {
@@ -271,13 +289,13 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-15 mb-lg-15 large">
-                        <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-warning" href="Shop.html">Shop</a></li>
-                        <li class="nav-item"><a class="nav-link text-warning" href="upcoming events.html">Upcoming Events</a></li>
-                        <li class="nav-item"><a class="nav-link text-warning" href="fallleague.html">2024 Fall League Info</a></li>
-                        <li class="nav-item"><a class="nav-link text-warning" href="Service.html">Services & Policies</a></li>
-                        <li class="nav-item"><a class="nav-link text-warning" href="contact.html">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link text-warning" href="staff.html">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Shop.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="upcoming events.html">Upcoming Events</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="fallleague.html">2025 Fall League Info</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Service.html">Services & Policies</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact Us</a></li>
+                    
                     </ul>
                 </div>
             </div>
@@ -394,29 +412,51 @@
 
 
 <!-- Navigation Boxes Below Slideshow -->
-<div class="container mt-4 mb-5">
-    <div class="row justify-content-center">
-        <div class="col-md-4 mb-3">
-            <a href="calendar.html" class="nav-box">
-                <div class="nav-box-title">Calendar</div>
-                <div class="nav-box-desc">View upcoming events, important dates, and schedule reminders.</div>
-            </a>
+<div class="container my-5">
+    <div class="row justify-content-center g-4">
+        <!-- Calendar Box -->
+        <div class="col-md-4">
+            <div class="nav-box d-flex align-items-center p-4">
+                <div class="icon me-3">
+                    <i class="bi bi-calendar3" style="font-size: 3rem; color: #143668;"></i>
+                </div>
+                <div class="text flex-grow-1">
+                    <h5 class="text-blue mb-2">Calendar</h5>
+                    <p class="text-blue mb-3">Check out upcoming events and team schedules.</p>
+                    <a href="calendar.html" class="btn btn-primary">Go to Calendar</a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 mb-3">
-            <a href="shop.html" class="nav-box">
-                <div class="nav-box-title">Shop</div>
-                <div class="nav-box-desc">Browse our products, find exclusive deals, and order online.</div>
-            </a>
+
+        <!-- Shop Box -->
+        <div class="col-md-4">
+            <div class="nav-box d-flex align-items-center p-4">
+                <div class="icon me-3">
+                    <i class="bi bi-cart4" style="font-size: 3rem; color: #143668;"></i>
+                </div>
+                <div class="text flex-grow-1">
+                    <h5 class="text-blue mb-2">Shop</h5>
+                    <p class="text-blue mb-3">Browse our baseball gear and team merchandise.</p>
+                    <a href="shop.html" class="btn btn-primary">Go to Shop</a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 mb-3">
-            <a href="signup.html" class="nav-box">
-                <div class="nav-box-title">Sign Up</div>
-                <div class="nav-box-desc">Join us today to access members-only features and updates.</div>
-            </a>
+
+        <!-- Sign Up Box -->
+        <div class="col-md-4">
+            <div class="nav-box d-flex align-items-center p-4">
+                <div class="icon me-3">
+                    <i class="bi bi-person-plus" style="font-size: 3rem; color: #143668;"></i>
+                </div>
+                <div class="text flex-grow-1">
+                    <h5 class="text-blue mb-2">Sign Up</h5>
+                    <p class="text-blue mb-3">Join our community and register for events.</p>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
     <!-- Footer -->
     <footer class="py-4 mt-auto">
         <div class="container px-5">
