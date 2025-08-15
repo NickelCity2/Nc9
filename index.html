@@ -34,7 +34,13 @@
         .navbar-nav .nav-link {
             font-size: 20px !important;
         }
-
+ /* Nav boxes */
+ .nav-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
         .facebook-feed {
             width: 100%;
             max-width: 500px; /* Adjust as needed */
@@ -239,7 +245,7 @@
             <div class="container px-5">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-15 mb-lg-15 large fw-bolder">
+                    <ul class="navbar-nav ms-auto mb-15 mb-lg-15 large">
                         <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link text-warning" href="Shop.html">Shop</a></li>
                         <li class="nav-item"><a class="nav-link text-warning" href="upcoming events.html">Upcoming Events</a></li>
@@ -360,6 +366,31 @@
         
         createDots();
     </script>
+
+
+<!-- Navigation Boxes Below Slideshow -->
+<div class="container mt-4">
+    <div class="row justify-content-center nav-boxes">
+        <div class="col-md-4 mb-3">
+            <a href="calendar.html" class="nav-box">
+                <div class="nav-box-title">Calendar</div>
+                <div class="nav-box-desc">View upcoming events, important dates, and schedule reminders.</div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a href="shop.html" class="nav-box">
+                <div class="nav-box-title">Shop</div>
+                <div class="nav-box-desc">Browse our products, find exclusive deals, and order online.</div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a href="signup.html" class="nav-box">
+                <div class="nav-box-title">Sign Up</div>
+                <div class="nav-box-desc">Join us today to access members-only features and updates.</div>
+            </a>
+        </div>
+    </div>
+</div>
     <!-- Footer -->
     <footer class="py-4 mt-auto">
         <div class="container px-5">
